@@ -11,7 +11,6 @@ public class Home extends JFrame implements ActionListener{
 	JButton corporate,birthday,kids,social,wedding;
 	JButton blogin,bregister;
 	ImageIcon corp,birth,kid,weds,soc;
-	JFrame frame;
 
 	public Home(){
 		super("Home Page");
@@ -61,7 +60,29 @@ public class Home extends JFrame implements ActionListener{
 		//pnl.add(corp);
 		JLabel lbl5=new JLabel(corp);
 		pnl.add(lbl5);
-		
+		//ImageIcon corp=new ImageIcon("C:\\Users\\Home\\Desktop\\images\\corporate1.png");
+		//ImageIcon weds=new ImageIcon("C:\\Users\\Home\\Desktop\\images\\wedding1.jpg");
+		//ImageIcon kid=new ImageIcon("C:\\Users\\Home\\Desktop\\images\\birthday1.jpg");
+		//ImageIcon soc=new ImageIcon("C:\\Users\\Home\\Desktop\\images\\social.jpg");
+		//ImageIcon birth=new ImageIcon("C:\\Users\\Home\\Desktop\\images\\birthday2.jpg");
+		//GridLayout gl=new GridLayout(2,3);
+		//events=new JPanel(gl);
+		//corporate=new JButton();
+		//corporate.setIcon(new ImageIcon("C:\\Users\\Home\\Desktop\\images\\corporate1.jpg"));
+		//wedding=new JButton(weds);
+		//kids=new JButton(kid);
+		//social=new JButton(soc);
+		//birthday=new JButton(birth);
+		//events.add(corporate);
+		//pnl.add(wedding);
+		//pnl.add(kids);
+		//pnl.add(social);
+		//pnl.add(birthday);
+		//validate();
+		//JLabel corpl=new JLabel("Corporate");
+		//corpl.setBounds(200,100,300,200);
+		//pnl.add(corpl);
+
 		corp=new ImageIcon("corporate1.jpg");
 		JButton corporate=new JButton(corp);
 		corporate.setBounds(200,175,250,180);
@@ -159,17 +180,14 @@ public class Home extends JFrame implements ActionListener{
 		pnl2.setBounds(0,620,width,height);
 		footer=new JLabel("Address : 'Make Merry Event Managers',Sukhwani Complex, 4th Floor, Chinchwad. Pune 411019");
 		footer2=new JLabel("Phone No. : 8900456099 / 020 788190678");
-		Font f5=new Font("Calibri",Font.BOLD,20);
-		footer.setFont(f5);
-		footer2.setFont(f5);
-		footer.setBounds(280,25,850,30);
-		footer2.setBounds(490,50,600,30);
+		footer.setFont(f2);
+		footer2.setFont(f2);
+		footer.setBounds(100,15,800,40);
+		footer2.setBounds(170,55,600,40);
 		footer.setForeground(Color.white);
 		footer2.setForeground(Color.white);
 		pnl2.add(footer);
 		pnl2.add(footer2);
-
-		
 	}
 
 

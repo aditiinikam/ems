@@ -3,14 +3,15 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.Image;
 
-public class Birthday extends JFrame{
+public class Birthday extends JFrame
+{
 
 	JPanel pnl,events;
 	JLabel lbl,lbl2,lbl3,lbl4;
 	public Birthday(){
 
 		super("Birthday");
-		setSize(700,700);
+		setSize(1450,900);
 		setVisible(true);
 
 
@@ -42,32 +43,104 @@ public class Birthday extends JFrame{
 
 		pnl.add(lbl);
 		pnl.add(lbl2);
-		pnl.add(lbl3);		
+		pnl.add(lbl3);
 
 		//-------- body ---------
-		lbl4=new JLabel("EVENTS");
+
+		//----------------------------------------Back to Home Button---------------------------------
+		JButton home = new JButton("Back to Home");
+		home.setBounds(100,100,150,30);
+		pnl.add(home);
+		home.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+					pnl.setVisible(false);
+		      Home h = new Home();
+					h.setVisible(true);
+       }
+    });
+
+		//-------------------------------------------HEADING-------------------------------------------
+		lbl4=new JLabel("BIRTHDAY EVENTS");
 		Font f4=new Font("Gabriola",Font.BOLD,40);
 		lbl4.setFont(f4);
 		lbl4.setForeground(Color.black);
-		lbl4.setBounds(630,0,200,400);
+		lbl4.setBounds(525,0,400,400);
 		pnl.add(lbl4);
 
+		//---------------------------------------EVENTS--------------------------------------------------
+		//Themed Party------------------------------------------------
+		ImageIcon themedPartyImage = new ImageIcon("themedParty.jpg");
+		JButton themedPartyButton = new JButton(themedPartyImage);
+		themedPartyButton.setBounds(337,225,250,180);
+		pnl.add(themedPartyButton);
+		JLabel themedPartyLabel = new JLabel("Themed Birthday Party");
+		themedPartyLabel.setFont(f2);
+		themedPartyLabel.setBounds(337,365,200,100);
+		pnl.add(themedPartyLabel);
 
-		JLabel corpl=new JLabel("Birthday");
-		corpl.setBounds(200,100,300,200);
-		pnl.add(corpl);
+		// seminar.addActionListener(new ActionListener(){
+		// 	public void actionPerformed(ActionEvent e){
+		// 		pnl.setVisible(false);
+	  //           EventPackage e = new EventPackage();
+		// 		c.setVisible(true);
+    //     	}
+    // 	});
 
-		JButton home=new JButton("Back to Home");
-		home.setBounds(700,400,250,30);
-		pnl.add(home);
-		home.addActionListener(new ActionListener(){  
-			public void actionPerformed(ActionEvent e){  
-				pnl.setVisible(false);
-	            Home h=new Home();
-				h.setVisible(true);  
-        	}  
-    	});
+		//Garden Party---------------------------------------------
+		ImageIcon gardenPartyImage = new ImageIcon("gardenParty.jpg");
+		JButton gardenPartyButton = new JButton(gardenPartyImage);
+		gardenPartyButton.setBounds(662,225,250,180);
+		pnl.add(gardenPartyButton);
+		JLabel gardenPartyLabel = new JLabel("Garden Party");
+		gardenPartyLabel.setFont(f2);
+		gardenPartyLabel.setBounds(662,365,200,100);
+		pnl.add(gardenPartyLabel);
 
+		// seminar.addActionListener(new ActionListener(){
+		// 	public void actionPerformed(ActionEvent e){
+		// 		pnl.setVisible(false);
+		//           EventPackage e = new EventPackage();
+		// 		c.setVisible(true);
+		//     	}
+		// 	});
+
+		//Surprise Party-----------------------------------------------------
+		ImageIcon surprisePartyImage = new ImageIcon("surpriseParty.jpg");
+		JButton surprisePartyButton = new JButton(surprisePartyImage);
+		surprisePartyButton.setBounds(100,450,250,180);
+		pnl.add(surprisePartyButton);
+		JLabel surprisePartyLabel = new JLabel("Surprise Party");
+		surprisePartyLabel.setFont(f2);
+		surprisePartyLabel.setBounds(100,590,200,100);
+		pnl.add(surprisePartyLabel);
+
+		// seminar.addActionListener(new ActionListener(){
+		// 	public void actionPerformed(ActionEvent e){
+		// 		pnl.setVisible(false);
+		//           EventPackage e = new EventPackage();
+		// 		c.setVisible(true);
+		//     	}
+		// 	});
+
+		//Dinner Party-------------------------------------------------------
+		ImageIcon dinnerPartyImage = new ImageIcon("dinnerParty.jpg");
+		JButton dinnerPartyButton = new JButton(dinnerPartyImage);
+		dinnerPartyButton.setBounds(920,450,250,180);
+		pnl.add(dinnerPartyButton);
+		JLabel dinnerPartyLabel = new JLabel("Dinner Party");
+		dinnerPartyLabel.setFont(f2);
+		dinnerPartyLabel.setBounds(920,590,200,100);
+		pnl.add(dinnerPartyLabel);
+
+		// seminar.addActionListener(new ActionListener(){
+		// 	public void actionPerformed(ActionEvent e){
+		// 		pnl.setVisible(false);
+		//           EventPackage e = new EventPackage();
+		// 		c.setVisible(true);
+		//     	}
+		// 	});
 	}
 
 	public static void main(String args[]){

@@ -3,14 +3,15 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.Image;
 
-public class Kids extends JFrame{
+public class Kids extends JFrame
+{
 
 	JPanel pnl,events;
 	JLabel lbl,lbl2,lbl3,lbl4;
 	public Kids(){
 
 		super("Kids");
-		setSize(700,700);
+		setSize(1450,900);
 		setVisible(true);
 
 
@@ -42,35 +43,109 @@ public class Kids extends JFrame{
 
 		pnl.add(lbl);
 		pnl.add(lbl2);
-		pnl.add(lbl3);		
+		pnl.add(lbl3);
 
 		//-------- body ---------
-		lbl4=new JLabel("EVENTS");
-		Font f4=new Font("Gabriola",Font.BOLD,40);
-		lbl4.setFont(f4);
-		lbl4.setForeground(Color.black);
-		lbl4.setBounds(630,0,200,400);
-		pnl.add(lbl4);
 
+			//----------------------------------------Back to Home Button---------------------------------
+			JButton home=new JButton("Back to Home");
+			home.setBounds(100,100,150,30);
+			pnl.add(home);
+			home.addActionListener(new ActionListener()
+			{
+				public void actionPerformed(ActionEvent e)
+				{
+						pnl.setVisible(false);
+			      Home h = new Home();
+						h.setVisible(true);
+	       }
+	    });
 
-		JLabel corpl=new JLabel("Kids");
-		corpl.setBounds(200,100,300,200);
-		pnl.add(corpl);
+			//-------------------------------------------HEADING-------------------------------------------
+			lbl4=new JLabel("KIDS EVENTS");
+			Font f4=new Font("Gabriola",Font.BOLD,40);
+			lbl4.setFont(f4);
+			lbl4.setForeground(Color.black);
+			lbl4.setBounds(525,0,400,400);
+			pnl.add(lbl4);
 
-		JButton home=new JButton("Back to Home");
-		home.setBounds(700,400,250,30);
-		pnl.add(home);
-		home.addActionListener(new ActionListener(){  
-			public void actionPerformed(ActionEvent e){  
-				pnl.setVisible(false);
-	            Home h=new Home();
-				h.setVisible(true);  
-        	}  
-    	});
+			//---------------------------------------EVENTS--------------------------------------------------
+			//Baby Shower------------------------------------------------
+			ImageIcon babyShowerImage = new ImageIcon("babyShower.jpg");
+			JButton babyShowerButton = new JButton(babyShowerImage);
+			babyShowerButton.setBounds(337,225,250,180);
+			pnl.add(babyShowerButton);
+			JLabel babyShowerLabel = new JLabel("Baby Shower");
+			babyShowerLabel.setFont(f2);
+			babyShowerLabel.setBounds(337,365,200,100);
+			pnl.add(babyShowerLabel);
 
+			// seminar.addActionListener(new ActionListener(){
+			// 	public void actionPerformed(ActionEvent e){
+			// 		pnl.setVisible(false);
+		  //           EventPackage e = new EventPackage();
+			// 		c.setVisible(true);
+	    //     	}
+	    // 	});
+
+			//Welcome Baby Party---------------------------------------------
+			ImageIcon welcomeBabyImage = new ImageIcon("welcomeBaby.jpg");
+			JButton welcomeBabyButton = new JButton(welcomeBabyImage);
+			welcomeBabyButton.setBounds(662,225,250,180);
+			pnl.add(welcomeBabyButton);
+			JLabel welcomeBabyLabel = new JLabel("Welcome Baby Party");
+			welcomeBabyLabel.setFont(f2);
+			welcomeBabyLabel.setBounds(662,365,200,100);
+			pnl.add(welcomeBabyLabel);
+
+			// seminar.addActionListener(new ActionListener(){
+			// 	public void actionPerformed(ActionEvent e){
+			// 		pnl.setVisible(false);
+			//           EventPackage e = new EventPackage();
+			// 		c.setVisible(true);
+			//     	}
+			// 	});
+
+			//Naming Ceremony-----------------------------------------------------
+			ImageIcon namingCeremonyImage = new ImageIcon("namingCeremony.jpg");
+			JButton namingCeremonyButton = new JButton(namingCeremonyImage);
+			namingCeremonyButton.setBounds(100,450,250,180);
+			pnl.add(namingCeremonyButton);
+			JLabel namingCeremonyLabel = new JLabel("Naming Ceremony");
+			namingCeremonyLabel.setFont(f2);
+			namingCeremonyLabel.setBounds(100,590,200,100);
+			pnl.add(namingCeremonyLabel);
+
+			// seminar.addActionListener(new ActionListener(){
+			// 	public void actionPerformed(ActionEvent e){
+			// 		pnl.setVisible(false);
+			//           EventPackage e = new EventPackage();
+			// 		c.setVisible(true);
+			//     	}
+			// 	});
+
+			//Themed Birthday Party-------------------------------------------------------
+			ImageIcon themedBirthdayPartyImage = new ImageIcon("themedBirthdayParty.jpg");
+			JButton themedBirthdayPartyButton = new JButton(themedBirthdayPartyImage);
+			themedBirthdayPartyButton.setBounds(920,450,250,180);
+			pnl.add(themedBirthdayPartyButton);
+			JLabel themedBirthdayPartyLabel = new JLabel("Themed Birthday Party");
+			themedBirthdayPartyLabel.setFont(f2);
+			themedBirthdayPartyLabel.setBounds(920,590,200,100);
+			pnl.add(themedBirthdayPartyLabel);
+
+			// seminar.addActionListener(new ActionListener(){
+			// 	public void actionPerformed(ActionEvent e){
+			// 		pnl.setVisible(false);
+			//           EventPackage e = new EventPackage();
+			// 		c.setVisible(true);
+			//     	}
+			// 	});
 	}
 
-	public static void main(String args[]){
+	public static void main(String args[])
+	{
 		new Kids();
 	}
+
 }

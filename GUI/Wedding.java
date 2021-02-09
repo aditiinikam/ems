@@ -10,7 +10,7 @@ public class Wedding extends JFrame{
 	public Wedding(){
 
 		super("Wedding");
-		setSize(700,700);
+		setSize(1450,900);
 		setVisible(true);
 
 
@@ -42,33 +42,140 @@ public class Wedding extends JFrame{
 
 		pnl.add(lbl);
 		pnl.add(lbl2);
-		pnl.add(lbl3);		
+		pnl.add(lbl3);
 
 		//-------- body ---------
-		lbl4=new JLabel("EVENTS");
-		Font f4=new Font("Gabriola",Font.BOLD,40);
-		lbl4.setFont(f4);
-		lbl4.setForeground(Color.black);
-		lbl4.setBounds(630,0,200,400);
-		pnl.add(lbl4);
+
+			JButton home=new JButton("Back to Home");
+			home.setBounds(100,100,150,30);
+			pnl.add(home);
+			home.addActionListener(new ActionListener()
+			{
+				public void actionPerformed(ActionEvent e)
+				{
+						pnl.setVisible(false);
+			      Home h = new Home();
+						h.setVisible(true);
+	       }
+	    });
+
+			lbl4=new JLabel("WEDDING EVENTS");
+			Font f4=new Font("Gabriola",Font.BOLD,40);
+			lbl4.setFont(f4);
+			lbl4.setForeground(Color.black);
+			lbl4.setBounds(525,0,400,400);
+			pnl.add(lbl4);
+
+			//Haldi
+			ImageIcon haldiImage = new ImageIcon("haldi.jpg");
+			JButton haldiButton = new JButton(haldiImage);
+			haldiButton.setBounds(100,220,250,180);
+			pnl.add(haldiButton);
+			JLabel haldiLabel = new JLabel("Haldi");
+			haldiLabel.setFont(f2);
+			haldiLabel.setBounds(100,360,200,100);
+			pnl.add(haldiLabel);
+
+			// seminar.addActionListener(new ActionListener(){
+			// 	public void actionPerformed(ActionEvent e){
+			// 		pnl.setVisible(false);
+		  //           EventPackage e = new EventPackage();
+			// 		c.setVisible(true);
+	    //     	}
+	    // 	});
 
 
-		JLabel corpl=new JLabel("Wedding");
-		corpl.setBounds(200,100,300,200);
-		pnl.add(corpl);
+			//Mehendi
+			ImageIcon mehendiImage = new ImageIcon("mehendi.jpg");
+			JButton mehendiButton = new JButton(mehendiImage);
+			mehendiButton.setBounds(516,220,250,180);
+			pnl.add(mehendiButton);
+			JLabel mehendiLabel = new JLabel("Mehendi");
+			mehendiLabel.setFont(f2);
+			mehendiLabel.setBounds(516,360,200,100);
+			pnl.add(mehendiLabel);
 
-		JButton home=new JButton("Back to Home");
-		home.setBounds(700,400,250,30);
-		pnl.add(home);
-		home.addActionListener(new ActionListener(){  
-			public void actionPerformed(ActionEvent e){  
-				pnl.setVisible(false);
-	            Home h=new Home();
-				h.setVisible(true);  
-        	}  
-    	});
+			// seminar.addActionListener(new ActionListener(){
+			// 	public void actionPerformed(ActionEvent e){
+			// 		pnl.setVisible(false);
+		  //           EventPackage e = new EventPackage();
+			// 		c.setVisible(true);
+	    //     	}
+	    // 	});
 
-	}
+
+			//Sangeet
+			ImageIcon sangeetImage = new ImageIcon("sangeet.jpg");
+			JButton sangeetButton = new JButton(sangeetImage);
+			sangeetButton.setBounds(932,220,250,180);
+			pnl.add(sangeetButton);
+			JLabel sangeetLabel = new JLabel("Sangeet");
+			sangeetLabel.setFont(f2);
+			sangeetLabel.setBounds(932,360,200,100);
+			pnl.add(sangeetLabel);
+
+			// seminar.addActionListener(new ActionListener(){
+			// 	public void actionPerformed(ActionEvent e){
+			// 		pnl.setVisible(false);
+		  //           EventPackage e = new EventPackage();
+			// 		c.setVisible(true);
+	    //     	}
+	    // 	});
+
+			//Engagement
+			ImageIcon engagementImage = new ImageIcon("engagement.jpg");
+			JButton engagementButton = new JButton(engagementImage);
+			engagementButton.setBounds(100,450,250,180);
+			pnl.add(engagementButton);
+			JLabel engagementLabel = new JLabel("Engagement");
+			engagementLabel.setFont(f2);
+			engagementLabel.setBounds(100,590,200,100);
+			pnl.add(engagementLabel);
+
+			// seminar.addActionListener(new ActionListener(){
+			// 	public void actionPerformed(ActionEvent e){
+			// 		pnl.setVisible(false);
+		  //           EventPackage e = new EventPackage();
+			// 		c.setVisible(true);
+	    //     	}
+	    // 	});
+
+			//Wedding
+			ImageIcon weddingImage = new ImageIcon("wedding.jpg");
+			JButton weddingButton = new JButton(weddingImage);
+			weddingButton.setBounds(516,450,250,180);
+			pnl.add(weddingButton);
+			JLabel weddingLabel = new JLabel("Wedding");
+			weddingLabel.setFont(f2);
+			weddingLabel.setBounds(516,590,200,100);
+			pnl.add(weddingLabel);
+
+			// seminar.addActionListener(new ActionListener(){
+			// 	public void actionPerformed(ActionEvent e){
+			// 		pnl.setVisible(false);
+		  //           EventPackage e = new EventPackage();
+			// 		c.setVisible(true);
+	    //     	}
+	    // 	});
+
+			//Reception
+			ImageIcon receptionImage = new ImageIcon("reception.jpg");
+			JButton receptionButton = new JButton(receptionImage);
+			receptionButton.setBounds(932,450,250,180);
+			pnl.add(receptionButton);
+			JLabel receptionLabel = new JLabel("Reception");
+			receptionLabel.setFont(f2);
+			receptionLabel.setBounds(932,590,200,100);
+			pnl.add(receptionLabel);
+
+			// seminar.addActionListener(new ActionListener(){
+			// 	public void actionPerformed(ActionEvent e){
+			// 		pnl.setVisible(false);
+		  //           EventPackage e = new EventPackage();
+			// 		c.setVisible(true);
+	    //     	}
+	    // 	});
+		}
 
 	public static void main(String args[]){
 		new Wedding();

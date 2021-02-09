@@ -10,7 +10,7 @@ public class Social extends JFrame{
 	public Social(){
 
 		super("Social");
-		setSize(700,700);
+		setSize(1450,900);
 		setVisible(true);
 
 
@@ -42,7 +42,7 @@ public class Social extends JFrame{
 
 		pnl.add(lbl);
 		pnl.add(lbl2);
-		pnl.add(lbl3);		
+		pnl.add(lbl3);
 
 		//-------- body ---------
 		lbl4=new JLabel("EVENTS");
@@ -60,12 +60,12 @@ public class Social extends JFrame{
 		JButton home=new JButton("Back to Home");
 		home.setBounds(700,400,250,30);
 		pnl.add(home);
-		home.addActionListener(new ActionListener(){  
-			public void actionPerformed(ActionEvent e){  
+		home.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
 				pnl.setVisible(false);
 	            Home h=new Home();
-				h.setVisible(true);  
-        	}  
+				h.setVisible(true);
+        	}
     	});
 	}
 
