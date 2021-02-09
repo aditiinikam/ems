@@ -3,15 +3,15 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.Image;
 
-public class Corporate extends JFrame{
+public class Social2 extends JFrame{
 
 	JPanel pnl,pnl2;
 	JLabel lbl,lbl2,lbl3,lbl4,footer,footer2;
-	JButton seminar,conference,inaug,workshop;
-	ImageIcon sem,conf,ina,works;
-	JLabel seml,confl,inal,worksl;
+	JButton cocktail,bridal,bachelors,anniversary;
+	ImageIcon coc,bride,bach,anni;
+	JLabel cocl,bridel,bachl,annil;
 
-	public Corporate(){
+	public Social2(){
 
 		super("Corporate Events");
 		setSize(1450,900);
@@ -49,23 +49,23 @@ public class Corporate extends JFrame{
 		pnl.add(lbl3);		
 
 		//-------- body ---------
-		lbl4=new JLabel("Corporate Events");
+		lbl4=new JLabel("Social Events");
 		Font f4=new Font("Gabriola",Font.BOLD,40);
 		lbl4.setFont(f4);
 		lbl4.setForeground(Color.black);
-		lbl4.setBounds(520,-55,400,400);
+		lbl4.setBounds(560,-55,200,400);
 		pnl.add(lbl4);
 		
-		sem=new ImageIcon("seminar.jpg");
-		JButton seminar=new JButton(sem);
-		seminar.setBounds(200,195,250,180);
-		pnl.add(seminar);
-		seml=new JLabel("Seminars");
-		seml.setFont(f2);
-		seml.setBounds(290,340,200,100);
-		pnl.add(seml);
+		coc=new ImageIcon("cocktail.jpg");
+		JButton cocktail=new JButton(coc);
+		cocktail.setBounds(200,195,250,180);
+		pnl.add(cocktail);
+		cocl=new JLabel("Cocktail Party");
+		cocl.setFont(f2);
+		cocl.setBounds(270,340,200,100);
+		pnl.add(cocl);
 
-		seminar.addActionListener(new ActionListener()
+		cocktail.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
@@ -75,16 +75,16 @@ public class Corporate extends JFrame{
       }
     });
 		
-		conf=new ImageIcon("conference.jpg");
-		JButton conference=new JButton(conf);
-		conference.setBounds(580,195,250,180);
-		pnl.add(conference);
-		confl=new JLabel("Conferences");
-		confl.setFont(f2);
-		confl.setBounds(640,340,200,100);
-		pnl.add(confl);
+		bride=new ImageIcon("bridal.jpg");
+		JButton bridal=new JButton(bride);
+		bridal.setBounds(580,195,250,180);
+		pnl.add(bridal);
+		bridel=new JLabel("Bridal Shower");
+		bridel.setFont(f2);
+		bridel.setBounds(620,340,200,100);
+		pnl.add(bridel);
 
-		conference.addActionListener(new ActionListener()
+		bridal.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
@@ -94,16 +94,16 @@ public class Corporate extends JFrame{
       }
     });
 
-		ina=new ImageIcon("inaug.jpg");
-		JButton inaug=new JButton(ina);
-		inaug.setBounds(370,430,250,180);
-		pnl.add(inaug);
-		inal=new JLabel("Inaugurations");
-		inal.setFont(f2);
-		inal.setBounds(430,580,200,100);
-		pnl.add(inal);
+		bach=new ImageIcon("bachellorette.jpg");
+		JButton bachelors=new JButton(bach);
+		bachelors.setBounds(370,430,250,180);
+		pnl.add(bachelors);
+		bachl=new JLabel("Bachellorette Party");
+		bachl.setFont(f2);
+		bachl.setBounds(400,580,200,100);
+		pnl.add(bachl);
 
-		inaug.addActionListener(new ActionListener()
+		bachelors.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
@@ -113,16 +113,16 @@ public class Corporate extends JFrame{
       }
     });
 
-		works=new ImageIcon("workshop.jpg");
-		JButton workshop=new JButton(works);
-		workshop.setBounds(830,430,250,180);
-		pnl.add(workshop);
-		worksl=new JLabel("Workshops");
-		worksl.setFont(f2);
-		worksl.setBounds(900,580,200,100);
-		pnl.add(worksl);
+		anni=new ImageIcon("anniversary.jpg");
+		JButton anniversary=new JButton(anni);
+		anniversary.setBounds(830,430,250,180);
+		pnl.add(anniversary);
+		annil=new JLabel("Anniversary");
+		annil.setFont(f2);
+		annil.setBounds(900,580,200,100);
+		pnl.add(annil);
 
-		workshop.addActionListener(new ActionListener()
+		anniversary.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
@@ -131,6 +131,7 @@ public class Corporate extends JFrame{
 					ep.setVisible(true);
       }
     });
+
 		/*weds=new ImageIcon("wedding1.jpg");
 		JButton wedding=new JButton(weds);
 		wedding.setBounds(730,400,250,180);
@@ -173,6 +174,16 @@ public class Corporate extends JFrame{
         	}  
     	});
 
+		JButton next=new JButton("Previous Page");
+		next.setBounds(1150,100,150,30);
+		pnl.add(next);
+		next.addActionListener(new ActionListener(){  
+			public void actionPerformed(ActionEvent h){  
+				pnl.setVisible(false);
+	            Social s=new Social();
+				s.setVisible(true);  
+        	}  
+    	});
 
 		footer=new JLabel("Address : 'Make Merry Event Managers', Sukhwani Complex, 4th Floor, Chinchwad. Pune 411019");
 		footer2=new JLabel("Phone No. : 8900456099 / 020 788190678");

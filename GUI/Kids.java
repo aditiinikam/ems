@@ -80,6 +80,16 @@ public class Kids extends JFrame
 			babyShowerLabel.setBounds(337,365,200,100);
 			pnl.add(babyShowerLabel);
 
+			babyShowerButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+					pnl.setVisible(false);
+		     	EventPackages ep = new EventPackages();
+					ep.setVisible(true);
+      }
+    });
+
 			// seminar.addActionListener(new ActionListener(){
 			// 	public void actionPerformed(ActionEvent e){
 			// 		pnl.setVisible(false);
@@ -98,6 +108,16 @@ public class Kids extends JFrame
 			welcomeBabyLabel.setBounds(662,365,200,100);
 			pnl.add(welcomeBabyLabel);
 
+
+			welcomeBabyButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+					pnl.setVisible(false);
+		     	EventPackages ep = new EventPackages();
+					ep.setVisible(true);
+      }
+    });
 			// seminar.addActionListener(new ActionListener(){
 			// 	public void actionPerformed(ActionEvent e){
 			// 		pnl.setVisible(false);
@@ -116,6 +136,16 @@ public class Kids extends JFrame
 			namingCeremonyLabel.setBounds(100,590,200,100);
 			pnl.add(namingCeremonyLabel);
 
+
+				namingCeremonyButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+					pnl.setVisible(false);
+		     	EventPackages ep = new EventPackages();
+					ep.setVisible(true);
+      }
+    });
 			// seminar.addActionListener(new ActionListener(){
 			// 	public void actionPerformed(ActionEvent e){
 			// 		pnl.setVisible(false);
@@ -134,6 +164,28 @@ public class Kids extends JFrame
 			themedBirthdayPartyLabel.setBounds(920,590,200,100);
 			pnl.add(themedBirthdayPartyLabel);
 
+			themedBirthdayPartyButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+					pnl.setVisible(false);
+		     	EventPackages ep = new EventPackages();
+					ep.setVisible(true);
+      }
+    });
+
+			JLabel footer=new JLabel("Address : 'Make Merry Event Managers', Sukhwani Complex, 4th Floor, Chinchwad. Pune 411019");
+			JLabel footer2=new JLabel("Phone No. : 8900456099 / 020 788190678");
+			Font f5=new Font("Calibri",Font.BOLD,20);
+			footer.setFont(f5);
+			footer2.setFont(f5);
+			footer.setBounds(280,660,850,30);
+			footer2.setBounds(490,680,600,30);
+			footer.setForeground(Color.black);
+			footer2.setForeground(Color.black);
+			
+			pnl.add(footer);
+			pnl.add(footer2);
 			// seminar.addActionListener(new ActionListener(){
 			// 	public void actionPerformed(ActionEvent e){
 			// 		pnl.setVisible(false);

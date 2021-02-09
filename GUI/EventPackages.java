@@ -114,6 +114,19 @@ public class EventPackages extends JFrame
 					ep.setVisible(true);
       }
     });
+
+    JLabel footer=new JLabel("Address : 'Make Merry Event Managers', Sukhwani Complex, 4th Floor, Chinchwad. Pune 411019");
+			JLabel footer2=new JLabel("Phone No. : 8900456099 / 020 788190678");
+			Font f5=new Font("Calibri",Font.BOLD,20);
+			footer.setFont(f5);
+			footer2.setFont(f5);
+			footer.setBounds(280,660,850,30);
+			footer2.setBounds(490,680,600,30);
+			footer.setForeground(Color.black);
+			footer2.setForeground(Color.black);
+			
+			pnl.add(footer);
+			pnl.add(footer2);
 	}
 
 	public static void main(String args[]){
