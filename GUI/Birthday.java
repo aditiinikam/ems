@@ -80,13 +80,15 @@ public class Birthday extends JFrame
 		themedPartyLabel.setBounds(337,365,200,100);
 		pnl.add(themedPartyLabel);
 
-		// seminar.addActionListener(new ActionListener(){
-		// 	public void actionPerformed(ActionEvent e){
-		// 		pnl.setVisible(false);
-	  //           EventPackage e = new EventPackage();
-		// 		c.setVisible(true);
-    //     	}
-    // 	});
+		themedPartyButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+					pnl.setVisible(false);
+		     	EventPackages ep = new EventPackages();
+					ep.setVisible(true);
+      }
+    });
 
 		//Garden Party---------------------------------------------
 		ImageIcon gardenPartyImage = new ImageIcon("gardenParty.jpg");
@@ -98,13 +100,15 @@ public class Birthday extends JFrame
 		gardenPartyLabel.setBounds(662,365,200,100);
 		pnl.add(gardenPartyLabel);
 
-		// seminar.addActionListener(new ActionListener(){
-		// 	public void actionPerformed(ActionEvent e){
-		// 		pnl.setVisible(false);
-		//           EventPackage e = new EventPackage();
-		// 		c.setVisible(true);
-		//     	}
-		// 	});
+		gardenPartyButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+					pnl.setVisible(false);
+		     	EventPackages ep = new EventPackages();
+					ep.setVisible(true);
+      }
+    });
 
 		//Surprise Party-----------------------------------------------------
 		ImageIcon surprisePartyImage = new ImageIcon("surpriseParty.jpg");
@@ -116,13 +120,15 @@ public class Birthday extends JFrame
 		surprisePartyLabel.setBounds(100,590,200,100);
 		pnl.add(surprisePartyLabel);
 
-		// seminar.addActionListener(new ActionListener(){
-		// 	public void actionPerformed(ActionEvent e){
-		// 		pnl.setVisible(false);
-		//           EventPackage e = new EventPackage();
-		// 		c.setVisible(true);
-		//     	}
-		// 	});
+		surprisePartyButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+					pnl.setVisible(false);
+		     	EventPackages ep = new EventPackages();
+					ep.setVisible(true);
+      }
+    });
 
 		//Dinner Party-------------------------------------------------------
 		ImageIcon dinnerPartyImage = new ImageIcon("dinnerParty.jpg");
@@ -134,13 +140,15 @@ public class Birthday extends JFrame
 		dinnerPartyLabel.setBounds(920,590,200,100);
 		pnl.add(dinnerPartyLabel);
 
-		// seminar.addActionListener(new ActionListener(){
-		// 	public void actionPerformed(ActionEvent e){
-		// 		pnl.setVisible(false);
-		//           EventPackage e = new EventPackage();
-		// 		c.setVisible(true);
-		//     	}
-		// 	});
+		dinnerPartyButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+					pnl.setVisible(false);
+		     	EventPackages ep = new EventPackages();
+					ep.setVisible(true);
+      }
+    });
 	}
 
 	public static void main(String args[]){
